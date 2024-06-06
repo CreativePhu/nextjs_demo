@@ -62,7 +62,7 @@ export default function Login() {
                     </div>
                 </div>
             </div>
-            <div className={"absolute w-full h-2/6 bg-gray-200 -bottom-28 -skew-y-6"}></div>
+            <div className={"absolute w-full h-2/6 bg-gray-200 -bottom-28 -skew-y-3"}></div>
             <div className={"absolute bottom-20 flex flex-row justify-between items-end w-full px-24 z-10"}>
                 <Image src={"/banner/tree-left.png"} alt={"tree-left"} width={120} height={120}/>
                 <Image src={"/banner/tree-right.png"} alt={"tree-right"} width={150} height={150}/>
