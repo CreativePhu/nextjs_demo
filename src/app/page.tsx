@@ -9,6 +9,7 @@ export default function Home() {
             <ul>
                 <li><Link href={"/login"}>Login Page</Link></li>
                 <li><Link href={"/email-authentication"}>Email Authentication Page</Link></li>
+                <li><Link href={"/forgot-password"}>Forgot Password Page</Link></li>
             </ul>
         </div>
     );
