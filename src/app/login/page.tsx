@@ -5,9 +5,12 @@ import {Checkbox} from "@/components/ui/checkbox";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 
-export default function Login() {
+const Login: React.FC = () => {
     return (
         <div className={"relative min-h-screen overflow-hidden"}>
+            <div className={"container"}>
+                <Link href={"/"} className={"text-green-700 font-bold"}>Click me go home!</Link>
+            </div>
             <div className={"flex grid-cols-2 gap-10 justify-center items-start mt-32"}>
                 <div>
                     <Image
@@ -70,3 +73,5 @@ export default function Login() {
         </div>
     )
 }
+
+export default Login

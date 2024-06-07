@@ -1,13 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import {InputOTP, InputOTPGroup, InputOTPSlot} from "@/components/ui/input-otp";
 import {Button} from "@/components/ui/button";
 import Link from "next/link";
 import {Input} from "@/components/ui/input";
 
-const ForgotPasswordPage = () => {
+const ForgotPasswordPage:React.FC = () => {
     return (
         <div className={"relative min-h-screen overflow-hidden"}>
+            <div className={"container"}>
+                <Link href={"/"} className={"text-green-700 font-bold"}>Click me go home!</Link>
+            </div>
             <div className={"flex grid-cols-2 justify-center items-start mt-32"}>
                 <div className={"bg-white px-8 py-8 rounded-md w-1/4"}>
                     <div className={"flex flex-row justify-center items-center"}>
@@ -23,7 +25,8 @@ const ForgotPasswordPage = () => {
                         </div>
                     </div>
                     <p className={"text-xl text-gray-500 font-bold mt-8"}>Quên mật khẩu</p>
-                    <p className={"text-sm text-gray-400 mt-2"}>Chúng tôi sẽ gửi cho bạn hướng dẫn để đặt lại mật khẩu đến email của bạn</p>
+                    <p className={"text-sm text-gray-400 mt-2"}>Chúng tôi sẽ gửi cho bạn hướng dẫn để đặt lại mật khẩu
+                        đến email của bạn</p>
                     <form>
                         <div className={"mt-4 mb-4"}>
                             <Input placeholder={"Email"} type={"email"} className={"py-6"}/>

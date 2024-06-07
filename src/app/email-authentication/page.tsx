@@ -4,9 +4,12 @@ import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {InputOTP, InputOTPGroup, InputOTPSlot} from "@/components/ui/input-otp";
 
-export default function EmailAuthentication() {
+const EmailAuthentication: React.FC = () => {
     return (
         <div className={"relative min-h-screen overflow-hidden"}>
+            <div className={"container"}>
+                <Link href={"/"} className={"text-green-700 font-bold"}>Click me go home!</Link>
+            </div>
             <div className={"flex grid-cols-2 justify-center items-start mt-32"}>
                 <div className={"bg-white px-8 py-8 rounded-md w-1/4"}>
                     <div className={"flex flex-row justify-center items-center"}>
@@ -51,3 +54,5 @@ export default function EmailAuthentication() {
         </div>
     )
 }
+
+export default EmailAuthentication;
