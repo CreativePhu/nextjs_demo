@@ -1,12 +1,27 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {InputOTP, InputOTPGroup, InputOTPSlot} from "@/components/ui/input-otp";
+import {decrement, increment} from "@/app/redux/counter/counter.";
+import {useAppDispatch, useAppSelector} from "@/app/redux/hook/hooks";
 
 const EmailAuthentication: React.FC = () => {
+
+    const count: number = useAppSelector((state) => state.counter.values);
+    const dispatch = useAppDispatch();
+
     return (
         <div className={"relative min-h-screen overflow-hidden"}>
+            <div className={"flex flex-row ms-4"}>
+                <button className={"me-4 text-orange-500 font-bold"} onClick={() => dispatch(increment())}>Increment
+                </button>
+                <h1 className={"text-cyan-900 text-2xl"}>COUNT: {count}</h1>
+                <button className={"me-4 text-orange-500 font-bold ms-4"}
+                        onClick={() => dispatch(decrement())}>Decrement
+                </button>
+            </div>
             <div className={"container"}>
                 <Link href={"/"} className={"text-green-700 font-bold"}>Click me go home!</Link>
             </div>
